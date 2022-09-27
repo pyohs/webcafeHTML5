@@ -23,8 +23,7 @@ html, body {
 /* 헤더 */
 .header {
   background-color: yellow;
-  height: 10vh;
-  border:10px solid red;  
+  height: 10vh; 
   padding:0 20px;
 
 }
@@ -34,19 +33,32 @@ html, body {
   height: 10vh;
 }
 /* 메인콘텐츠 */
-.main {
+/* flex를 활용한 메인콘텐츠 배치 */
+/*.main {
   background-color: blue;
   height: 60vh;
   display:flex;
   flex-flow: row nowrap;
   justify-content: space-between; /* space-around정렬도 가능 padding값으로 조정 */
-  padding:
+  /*padding: 30px 15px;
   /*justify-content: space-evenly;  IE11미지원*/  
 
+  /* floot을 활용한 메인콘텐츠 배치 */
+.main {
+  background-color: blue;
+  display:flow-root;   /*float 해결* /* overflow: hidden과 관련되어 있음 *//* 부모요소에 clearfix를 주는 방법을 많이 사용 */
+  min-height:450px;
+  padding:30px 15px;
 }
-
-.group{
-  
+/* .clearfix::after {
+  content: "";
+  background-color: red;
+  clear: both;
+  display: block;
+} */
+.group {
+  margin:0 15px;
+  float:left;
 }
 .group1 {
   background-color: pink;
@@ -61,7 +73,9 @@ html, body {
   background-color: salmon;
   width:190px;
   /*order:-1 /* 아이템 순서 바꾸기 가능. 기본이 0 */
-
+}
+.clearfix {
+  clear:both;
 }
 
 /* 슬로건 */
