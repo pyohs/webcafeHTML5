@@ -37,7 +37,33 @@ html, body {
 .main {
   background-color: blue;
   height: 60vh;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between; /* space-around정렬도 가능 padding값으로 조정 */
+  padding:
+  /*justify-content: space-evenly;  IE11미지원*/  
+
 }
+
+.group{
+  
+}
+.group1 {
+  background-color: pink;
+  width:250px;
+}
+.group2 {
+  background-color: lime;
+  width:380px;
+
+}
+.group3 {
+  background-color: salmon;
+  width:190px;
+  /*order:-1 /* 아이템 순서 바꾸기 가능. 기본이 0 */
+
+}
+
 /* 슬로건 */
 .slogan {
   background-color: aqua;
