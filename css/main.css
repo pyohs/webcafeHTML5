@@ -2,6 +2,15 @@
 html, body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
+body {
+  color:#000;
+  background-color: #ccc;
+}
+/* 링크스타일 */
+a {
+  text-decoration: none;
+  color:inherit; /*상속값을 쓴다*/
+}
 /* 박스사이징 재정이 */
 *, *::before, *::after {
   box-sizing:border-box;
@@ -16,20 +25,61 @@ html, body {
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner {
   width: 940px;
-  margin:0 auto;
-  
+  margin:0 auto; 
 }
 
 /* 헤더 */
 .header {
-  background-color: yellow;
-  height: 10vh; 
-  padding:0 20px;
-
+  position:relative;
+  padding:0 30px;
+  height:120px;
+  background-color: #fff;
+  border-radius: 0 0 15px 15px;
+  /* height: 10vh;  */
 }
+
+/* 로고 */
+.logo {
+  margin:0;
+  font-size:1em;
+  position:absolute;
+  top:45px;
+  left:65px;
+}
+.logo a {
+  display:block;   /*탭키 이동시 아웃라인이 발생하지 않을 수 있음*/
+}
+.logo img {
+  vertical-align: top;
+}
+
+/* 멤버 서비스 링크 */
+.member-service {
+  margin:0;
+  padding-left:0;
+  list-style-type: none;
+  /* font-size:0;  공백만들기 해결책 */
+  text-align:right;
+  /*margin-right:-10px;*/   /**네거티브마진으로 마이너스 가능 padding은 안됨/
+  position:relative;
+  rightL-10px;    */
+  transform:translateX(10px)   /*x축으로 10px 이동하라 모던브라우져에서만 사용 가능 익스안됨*/
+}  
+.member-service li {
+  display:inline-block;
+  padding:4px 0;
+  text-transform: uppercase;   /*대문자로 변경*/
+}
+.member-service a {
+  display: inline-block;    /*부모가 inline-block이라 같은걸로 준다*/
+  padding:6px 10px;
+}
+/* .member-service li:focus {
+  outline-offset: -4px;    포커스 박스를 지정 할 수 있다.
+} */
+
 /* 비쥬얼 */
 .visual {
-  background-color: orange;
   height: 10vh;
 }
 /* 메인콘텐츠 */
@@ -45,7 +95,6 @@ html, body {
 
   /* floot을 활용한 메인콘텐츠 배치 */
 .main {
-  background-color: blue;
   display:flow-root;   /*float 해결* /* overflow: hidden과 관련되어 있음 *//* 부모요소에 clearfix를 주는 방법을 많이 사용 */
   min-height:450px;
   padding:30px 15px;
