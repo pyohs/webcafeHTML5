@@ -22,6 +22,26 @@ a {
 .logo {
   margin:0;
 }
+/* 건너띄기 링크 */
+.skip-nav {
+  background-color: #000;
+  text-align: center;
+  color:#fff;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:10;
+}
+.skip-nav a {
+  display:inline-block;
+  padding:10px;
+  position:absolute;
+}
+.skip-nav a:focus {
+  outline-offset: -4px;   /*포터스를 안쪽으로 들어오게 하는 방식 -padding 대신 사용 가능*/
+  position:static;       /* absolute 원래로 변경*/
+}
 /* 레이아웃 */
 .header, .visual, .main, .slogan, .footer-inner {
   width: 940px;
