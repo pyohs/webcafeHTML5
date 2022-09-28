@@ -10,8 +10,8 @@ html {
 body {
   font-size: 1.4rem;
   color:#000;
-  background-color: #ccc;
-}
+  background: url(./images/bg_flower.png) no-repeat 50% 0, #ccc linear-gradient(to bottom, #ccc 0%, #eee 30%, #fff 60%, #fff 100%);
+}   /* 그라데이션이 밑에 깔려야 하기 때문에 백그라운드에 색깔은 그라디언트로 보내야 한다 또는 백그라운드 칼라를 밑에 독립적으로 사용 가능*/
 /*숨김콘텐츠*/
 .a11y-hidden {
   position:absolute;
@@ -194,8 +194,50 @@ a {
   right:0;
 }
 /* 비쥬얼 */
+@keyframes moveEffect {
+  0%{
+    font-size:12px;
+    color:rgba(0,0,0,0);
+    transform: translate(0,0);
+  }
+  100%{
+    font-size:24px;
+    color:rgba(0,0,0,1);
+    transform :translate(400px, 75px);
+  }
+}
+@keyframes fadeEffect {
+  0%{opacity: 1;}
+  100%{opacity: 0;}
+}
+.visual::before {
+  background: url(./images/ani_flower_01.png) no-repeat 0 -10px, url(./images/ani_flower_02.png) no-repeat 600px 0;
+}    /* 백그라운드가 두개 가능*/ 
+.visual::after {
+  background: url(./images/ani_flower_03.png) no-repeat 300px , url(./images/ani_flower_04.png) no-repeat 800px 10px;
+  animation-delay: 1000ms;   /*지연시키는 태그*/
+}    /* 두번째가 위로 오지 않고, 밑으로 간다 순차적으로 보임(겹치게 했을때)*/ 
+.visual-text {
+  position:relative;
+  z-index: 10;
+  animation-name:moveEffect; /* 애니메이션 이름*/
+  animation-duration: 2000ms;   /* 2초*/
+  animation-fill-mode: forwards; /* 애니메이션 횟수*/
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display:inline-block;  /*상자가 이동하면서 블럭을 인라인블럭으로 바꾸서 위드값을 줄여주는 효과*/
+}
 .visual {
-  height: 10vh;
+  height: 120px;
+  position: relative;
+}
+.visual::before, .visual::after {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  animation: fadeEffect 2000ms infinite alternate;/*네임, 시간, 반복여부, 방향*/
 }
 /* 메인콘텐츠 */
 /* flex를 활용한 메인콘텐츠 배치 */
@@ -213,6 +255,8 @@ a {
   display:flow-root;   /*float 해결* /* overflow: hidden과 관련되어 있음 *//* 부모요소에 clearfix를 주는 방법을 많이 사용 */
   min-height:450px;
   padding:30px 15px;
+  background:#fff;
+  border-radius: 15px 15px 0 0;
 }
 /* .clearfix::after {
   content: "";
