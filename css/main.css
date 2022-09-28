@@ -13,7 +13,7 @@ body {
   background: url(./images/bg_flower.png) no-repeat 50% 0, #ccc linear-gradient(to bottom, #ccc 0%, #eee 30%, #fff 60%, #fff 100%);
 }   /* 그라데이션이 밑에 깔려야 하기 때문에 백그라운드에 색깔은 그라디언트로 보내야 한다 또는 백그라운드 칼라를 밑에 독립적으로 사용 가능*/
 /*숨김콘텐츠*/
-.a11y-hidden {
+.a11y-hidden, legend {
   position:absolute;
   width:1px;  /*최소한의 크기는 가져야(존재햐여) 읽어줄수 있음*/
   height:1px;
@@ -210,6 +210,15 @@ a {
   0%{opacity: 1;}
   100%{opacity: 0;}
 }
+.visual::before, .visual::after {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  animation: fadeEffect 2000ms infinite alternate;/*네임, 시간, 반복여부, 방향*/
+}
 .visual::before {
   background: url(./images/ani_flower_01.png) no-repeat 0 -10px, url(./images/ani_flower_02.png) no-repeat 600px 0;
 }    /* 백그라운드가 두개 가능*/ 
@@ -230,15 +239,7 @@ a {
   height: 120px;
   position: relative;
 }
-.visual::before, .visual::after {
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  animation: fadeEffect 2000ms infinite alternate;/*네임, 시간, 반복여부, 방향*/
-}
+
 /* 메인콘텐츠 */
 /* flex를 활용한 메인콘텐츠 배치 */
 /*.main {
