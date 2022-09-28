@@ -270,7 +270,6 @@ a {
   float:left;
 }
 .group1 {
-  background-color: pink;
   width:250px;
 }
 .group2 {
@@ -286,6 +285,86 @@ a {
 .clearfix {
   clear:both;
 }
+/* 로그인 */
+.login {
+  background: radial-gradient(circle at right top, #db6c2b, #dd422a);
+  border-radius: 5px;
+  box-shadow: 5px 5px 0 0 #ccc;
+  padding:10px;
+}
+.login-form {
+  background:#fff;
+  border-radius: 5px 5px 0 0;
+  position:relative;
+  padding:10px 10px 0 10px;
+}
+.login-form div {
+  margin-bottom:6px;
+}
+.user-email {
+  padding:
+}
+
+.login-title {
+  font-size:1.5rem;
+  color:#ff0;
+  margin:0 0 10px 10px;
+}
+.login-form label {
+  width:4em;
+  display:inline-block;
+}
+.login-form input {
+  width:90px;
+  height:22px;
+  padding:1px 1px 1px 8px;
+  border:1px solid #aaa;
+  border-radius: 1px;
+}
+.login-form fieldset {
+  border:0; 
+  margin:0; 
+  padding:0;
+  position: relative;
+  border-bottom: 1px solid #aaa;
+  padding-bottom:4px;
+}
+.button-login {
+  position:absolute;
+  top:0;
+  right:0;
+}
+.button-login{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #e8852e;
+  background-color: #ed552f;
+  color: #fff;
+  padding: 0;
+  font-size: 1.2rem; /* 12px */
+  border-radius: 3px;
+}
+
+.sign {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  padding:4px 10px;
+  display: flex;
+  justify-content: space-between;   /*양 옆에 배치*/
+}
+.sign a {
+  /*display: block;*/
+  padding:6px 0;
+  font-size:1.3rem;
+}
+.icon-right-open::before {
+  color:#db6c2b;
+}
+
+
 
 /* 슬로건 */
 .slogan {
