@@ -259,12 +259,12 @@ a {
   background:#fff;
   border-radius: 15px 15px 0 0;
 }
-/* .clearfix::after {
+.clearfix::after {
   content: "";
   background-color: red;
   clear: both;
   display: block;
-} */
+} 
 .group {
   margin:0 15px;
   float:left;
@@ -388,7 +388,50 @@ a {
 .validation-list a:hover, .validation-list a:focus {
   color:#f00;
 }
+/* 웹관련 용어 */
+.term {
+  margin-top:20px;
+  border:1px solid #aaa;
+  border-radius: 5px;
+  background: #ccc linear-gradient(#ccc, #eee);  /* 위에서 아래로는 to bottom은 삭제해도 된다 디폴드값*/
+  padding:10px 15px;
+}
+.term-title {
+  font-size:1.5rem;
+  margin:0;
+}
+.term-list {
+  margin-top:10px 0 0 0;
+}
+.term-list dd {
+  margin-left:0;
+}
+.term-list-inner {
+  display: flow-root;  /* 부모에게 높이값을 주는 개념 */
+  margin-top:10px;
+}
+.term-list-subject {
+  color:#296897;
+  font-weight: 500;
+  float:right;
+  width:140px;
 
+}
+.term-list-thumbnail {
+  float:left;
+}
+.term-list-thumbnail img {
+  vertical-align: top;
+}
+.term-list-brief {
+  margin-top:5px;
+  float:right;
+  width:140px;
+}
+.reverse .term-list-thumbnail {
+  float:right;
+}
+.reverse .term-list-subject, .reverse .term-list-brief {float:left;}
 
 /* 슬로건 */
 .slogan {
