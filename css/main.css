@@ -364,6 +364,30 @@ a {
   color:#db6c2b;
 }
 
+/* 유효성 검사 배너 */
+.validation {
+  margin-top:25px;
+}
+.validation-list {
+  margin:0;
+  padding-left:0;
+  list-style: none;
+}
+.validation-list li {
+  margin-top:10px;
+}
+
+.validation-list a {
+  display:block;
+  border-radius:30px; /* 여유있게 지정 */
+  background: url(./images/validation_icon.png) no-repeat 20px 50%, #ccc linear-gradient(to bottom, #ccc ,#eee); /*박스가 길어질것을 대비해서 세로축을 50%로 지정*/
+  border:1px solid #aaa;
+  padding-left:45px;
+  padding:8px 20px 8px 45px;
+}
+.validation-list a:hover, .validation-list a:focus {
+  color:#f00;
+}
 
 
 /* 슬로건 */
