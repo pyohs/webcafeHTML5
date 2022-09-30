@@ -82,6 +82,9 @@ a {
 .accent-color {
   color:#dd422a;
 }
+.gap-top-md {
+  margin-top:20px;
+}
 .headline {
   font-size:1.5rem;
   font-weight: 700;
@@ -695,7 +698,7 @@ a {
   border-radius: 5px;
   height:27px;
   overflow:hidden;
-  transition: height 250ms, padding 250ms 250ms, background 250ms 500ms;  /*hover되기 전에 선언*/ /*all:속성(변화는 모든것), 시간*/
+  transition: height 250ms, padding 250ms 250ms, background-color 250ms 500ms;  /*hover되기 전에 선언*/ /*all:속성(변화는 모든것), 시간*/
 }
 .related-list li {
   height:25px;
@@ -707,6 +710,7 @@ a {
 .related-list:hover, .related-list:focus {
   height:147px;
   padding:10px 0;
+  background-color: #ccc;
 }
 .related-list li a {
   /* flex-basis: 100%; */
@@ -716,6 +720,66 @@ a {
   padding:0 15px;
   /*line-height: 17px; 대신 부모영역에 flex를 준다*/
 }
+/* 인기사이트 */
+.favorite {
+  position:relative;
+}
+.favorite-title {
+
+}
+.favorite-list {
+  margin-top:10px;
+}
+.favorite-list li { 
+  counter-increment: number;   /* 밑에 content에 number이름 지정 - 순서대로 넘버가 지정됨   *함수레벨*/
+  margin-top:5px;
+  margin-top:8px;
+  position:relative;
+
+}
+.favorite-list li::before {
+  content: counter(number);
+  display:inline-block;
+  width:16px;
+  margin-right:5px;
+  border-radius: 3px;
+  font-size: 1.3rem;
+  background:#666;
+  color:#fff;
+  padding:0 5px;
+}
+.favorite-list a, .favorite-list em {
+ 
+}
+.favorite-list a  {
+
+}
+.up, .down, .stop{
+  position:absolute;
+  top:50%;     /*상자사이즈 50% 절반 부터 시작*/
+  right:0;
+  margin-top:-5px; /*상자사이즈의 절반만큼 끌어올린다 transform:translateY(-50%)*/
+  background: url(./images/rank.png) no-repeat;
+  width:11px;
+  height:9px;
+  padding-top:11px;
+}
+.up {
+  background-position: 0 0;
+}
+.down {
+  background-position: 0 100%;
+}
+.stop {
+  background-position: 0 50%;
+}
+.favorite-more {
+  position:absolute;
+  top:-8px; 
+  right:-8px;
+  padding:8px;
+}
+
 /* 슬로건 */
 .slogan {
   background-color: aqua;
