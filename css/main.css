@@ -306,7 +306,6 @@ a {
 
 }
 .group3 {
-  background-color: salmon;
   width:190px;
   /*order:-1 /* 아이템 순서 바꾸기 가능. 기본이 0 */
 }
@@ -653,7 +652,7 @@ a {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-  gap:5px;   /*IE11 안됨 - 다른곳에 마진을 주면 됨*/
+  /*gap:5px;   /*IE11 안됨 - 다른곳에 마진을 주면 됨*/
   
 }
 .event-button-prev, .event-button-next {
@@ -667,6 +666,7 @@ a {
 
 .event-button-prev {
   background-position: 0 0;
+  margin-right:5px;
 }
 /*
 .event-button button:focus {
@@ -685,8 +685,37 @@ a {
 }
 
 /* 관련사이트 */
-.
-
+.related {
+  padding-top:10px;
+}
+.related-list {
+  margin-top:10px;
+  background-color: #fff;
+  border:1px solid #aaa;
+  border-radius: 5px;
+  height:27px;
+  overflow:hidden;
+  transition: height 250ms, padding 250ms 250ms, background 250ms 500ms;  /*hover되기 전에 선언*/ /*all:속성(변화는 모든것), 시간*/
+}
+.related-list li {
+  height:25px;
+  padding:4px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.related-list:hover, .related-list:focus {
+  height:147px;
+  padding:10px 0;
+}
+.related-list li a {
+  /* flex-basis: 100%; */
+  flex:0 1 100%;  /*확대도 축소도 하지 말고 100%만 되라*/
+  /*flex-grow: 1; /*전체를 확대 width:100%을 줘도 된다* /
+  /* display:block; */
+  padding:0 15px;
+  /*line-height: 17px; 대신 부모영역에 flex를 준다*/
+}
 /* 슬로건 */
 .slogan {
   background-color: aqua;
