@@ -1,0 +1,26 @@
+**디자인 시스템
+- 많이 사용하는 자주사용하는 것들을 클래스로 모듈로 만들어서 쓴다.
+
+*IR기법(image Replacement)  - 성능 및 관리 차원에서 !! 백그라운드 이미지로 처리 
+css sprite(css 스프라이트)
+
+*함수레벨 공부하기
+counter-increment: number
+content: counter(number)
+
+background-size
+background-positition
+레티나 이미지 스프라이트! 찾아보기
+
+*인용문
+Q,
+blockguote
+- cite에 url이나 isbn 기재
+
+/* 동영상 확인
+bit.ly/3SMM1MX
+bit.ly/3SGwi1K
+
+*footer 사용
+address, small
+

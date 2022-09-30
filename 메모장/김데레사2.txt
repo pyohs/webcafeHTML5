@@ -1,0 +1,39 @@
+*코딩컨벤션
+- 독타입 선언하고 나서 태그의 성격 결정
+<p></p> 더블사이즈
+<img> 싱글사이즈
+
+Noto sans - 구글
+spoga Han sans - 어도비
+CJK - 아시아권을 위한 폰트로 개발
+
+pretendard (국내사람이 지원)- 맥과 윈됭우에서 격차 없음
+https://noonnu.cc/font_page/694
+
+웹폰트를 젤처음에 선언(css)
+글꼴
+serif - 명조체종류 -- 포인트사용
+sans-serif - 고딕체종류 --본문사용
+
+콘텐츠가 없는 높이값 설정 vh -뷰포트 기준으로 높이값 지정(창이 작아지면 높이값도 줄어든다)
+
+shift alt 방향키 복사
+box-sizing:border-box 전체크기에 패딩및 마진값이 포함된 전체 width
+
+피그마 대안 XD(폐쇄망)
+ctrl+a 블록이 지정되지 않으것은 가상콘텐츠
+
+https://freefrontend.com/css-shape-outside-examples/       *shape-outside 그림과 이미지를 같이 있을때 라인따라서 글씨가 펼처짐
+
+**웹액츄얼리 출판사 ux
+**앤뷰이웨이디 - 웹용 스크린리더
+**react 알아보기
+**보기 - 명령팔레트- emmet약어로 맵핑 ul.member-service>li*>span[aria-hidden="true"]{:}+a[href="/"]
+  --설정-바로가기키 해당 하는사항(emmet약어로 맵핑) 찾아서 단축키 설정
+
+
+플랙스 그로우
+aria-hidden="true" - 스크리리더 읽지 않음
+
+git hub
+셋팅 - 페이지 - Branch - main 선택 save - 상단주소 확인 

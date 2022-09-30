@@ -1,0 +1,52 @@
+**논리적인 구조를 생각해서 시멘틱하게 설계
+**네이밍 규칙
+menu__item--active // menu안에 있는 item 이 active 한 상태
+**시맨틱네이밍
+- 의미 부여
+
+target='_blank' (꼭 기재요망)
+noopener 
+-권한 부여
+noreferrer
+
+.rel="noopener"
+
+태그 포매터 (shift-alt-F)
+-보기 - 명령팔레트 - 보기서식
+
+a태그에 download 기능 추가 (확인하기)
+
+.align-items: center
+
+**높이를 고정하지 않고 컴팩트하게 작업(반응형은 더!)
+dl 안에 div허용 (5.2)
+dl-div-dt-dd가 같이 존재해야함<dl>
+  <div>
+    <dt>foo</dt>
+    <dd>bar</dd>
+  </div>
+</dl>
+
+**새로생김
+input type="search" 
+새로 생김(아이폰등 타입이 다름)
+<datalist id=""
+
+* width:clamp (70px , 80px +15%, 180px   //반응형에 적합한 대안
+* calc()
+
+**display:flex; - flex-grow - flex-shrink  공부하기 (개념 파악)
+
+*https://www.w3.org/WAI/ARIA/apg/patterns/
+슬라이딩, 탭등 ui 참고
+
+*탭을 1.2.3으로 하고 리스트를 밑으로 1.2.3으로 마크업을 할 경우 aria기법을 사용해서 탭과 리스트를 묶어주어야 한다
+- https://github.com/niawa 참고!
+
+명도대비를 체크 할때 활성화된 것을 기준으로 명도대비 체크(비활성은 준수하지 않아도 됨)
+-크롬에서 같은 라인에 있는 백그라운드와 컬러는 명도대비 체크 가능
+
+*figure - 캡션정보가 담긴걸 사용
+
+*인라인 안에 블록태그가 가능하지 않으나 예외적으로 a태그는 한개까지 가능 /단 접근성 에서는 좋지 않음
+
