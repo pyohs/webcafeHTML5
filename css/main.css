@@ -642,7 +642,50 @@ a {
   right:-8px;
   padding:8px;
 }
+/* 신규이벤트 */
+.event {
+  border-bottom: 1px solid #999;
+}
+.event-title {
+  float:left;
+}
+.event-button {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  gap:5px;   /*IE11 안됨 - 다른곳에 마진을 주면 됨*/
+  
+}
+.event-button-prev, .event-button-next {
+  cursor: pointer;
+  padding:0;
+  width:19px;
+  height:18px;
+  border:0;
+  background-image: url(./images/back_forward.png);
+}
 
+.event-button-prev {
+  background-position: 0 0;
+}
+/*
+.event-button button:focus {
+  outline: #296897;
+}
+*/
+.event-button-next {
+  background-position: -36px 0;    /*이미지를 당겨야 해서 -를 쓴다*/
+
+}
+.event-thumbnail, .event-brief {
+  margin:10px 0; 
+}
+.event-thumbnail img {
+  box-shadow: 5px 5px 0 0 #999;
+}
+
+/* 관련사이트 */
+.
 
 /* 슬로건 */
 .slogan {
