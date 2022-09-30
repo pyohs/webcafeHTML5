@@ -814,5 +814,45 @@ a {
 }
 /* 푸터 */
 .footer {
-  height: 10vh;
+  background: #ccc linear-gradient(to bottom, #ccc 0%, #eee 30%, #fff 60%, #fff 100%);
+}
+.footer-inner {
+  padding:15px 80px 15px 180px;
+  position: relative;
+}
+/* 푸터로고 */
+.footer-logo {
+  position: absolute;
+  top:45px;
+  left:35px;
+}
+/* 가이드 링크 목록 */
+.guide-list {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;    /*넓이에 맞게 가운데 스페이스 준다*/
+  padding:4px 40px;
+  background: #7b8385;
+  color:#fff;
+  margin-right:20px;
+  border-radius:30px;
+}
+
+.guide-list a {
+  display:block;
+  padding:6px 10px;
+  text-transform: uppercase;   /*영문이 대문자로*/
+}
+/* 주소 및 연락처 */
+.address {
+  margin-top:10px;
+}
+.address span:nth-child(n+2) { /*1번빼고 2번부터 전부다*/
+  margin-left:10px;
+}
+/* 배지 */
+.badge-container {
+  position:absolute;
+  top:15px;
+  right:0;
 }
